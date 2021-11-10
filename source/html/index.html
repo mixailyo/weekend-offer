@@ -1,75 +1,207 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-
-  @@include("source/html/base/head.html")
-  <title>Список страниц</title>
-
-  <style>
-    .container {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    h1 {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    a {
-      color: rgb(10, 10, 175);
-    }
-
-    li {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 7px;
-    }
-
-    img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-      ol {
-        padding-left: 20px;
-      }
-
-      ol li {
-        margin-bottom: 15px;
-      }
-
-      .container {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-  </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>VK Team - Weekend offer</title>
 </head>
+
 <body>
+  <div style="display: none;">
+    @@include("build/img/sprite_auto.svg")
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__left-wrapper">
+          <a href="/" class="header__logo">
+            <svg class="header__logo-pic" width="129" height="42" aria-hidden="true">
+              <use xlink:href="#vk-team-logo"></use>
+            </svg>
+          </a>
+          <div class="header__content">
+            <div class="header__date">
+              <div class="header__date-numbers">4-5</div>
+              <div class="header__date-month">ноября</div>
+              <div class="header__date-where">онлайн</div>
+            </div>
+            <h1 class="header__title">Weekend<br> offer</h1>
+            <p class="header__subtitle">
+              Технического департамента VK для SRE-инженеров
+            </p>
+            <p class="header__description">
+              Поменяйте работу за одни выходные
+            </p>
+            <a href="team.mail.ru" class="header__link btn btn--white">Записаться</a>
+          </div>
+        </div>
+        <div class="header__right-wrapper">
+          <svg class="header__peoples" width="524" height="763" aria-hidden="true">
+            <use xlink:href="#header-peoples"></use>
+          </svg>
+        </div>
+        <div class="header__bg-pattern">
+          <svg class="header__pattern" width="570" height="808" aria-hidden="true">
+            <use xlink:href="#header-pattern"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <main>
-    <div class="container">
-      <img src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта">
-      <h1>Список страниц и компонентов</h1>
-      <ol>
-        <li>
-          <a href="components.html">UI Kit — components.html</a>
+    <section class="numbers">
+      <ul class="numbers__list">
+        <li class="numbers__item">
+          6 дата-центров
         </li>
-        <li>
-          <a href="main.html">Главная — main.html</a>
+        <li class="numbers__item">
+          Более 35 000 серверов
         </li>
-        <li>
-          <a href="#">Название страницы (состояние страницы, если отдельное) — ссылка на страницу</a>
+        <li class="numbers__item">
+          Суммарная емкость каналов — 6&nbsp;Tbs
         </li>
-      </ol>
-    </div>
+        <li class="numbers__item">
+          Мы храним более 2 Eb данных
+        </li>
+      </ul>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2 class="about__title">SRE в Техническом департаменте </h2>
+        <ul class="about__list">
+          <li class="about__item">
+            <div class="about__item-number">1</div>
+            <p class="about__item-text">
+              Уникальная экспертиза в области системного администрирования и сетевых технологий
+            </p>
+          </li>
+          <li class="about__item">
+            <div class="about__item-number">2</div>
+            <p class="about__item-text">
+              Гарант надежности и высокой доступности наших сервисов
+            </p>
+          </li>
+          <li class="about__item">
+            <div class="about__item-number">3</div>
+            <p class="about__item-text">
+              Возможность использовать передовые технологии и зачастую создавать их
+            </p>
+          </li>
+          <li class="about__item">
+            <div class="about__item-number">4</div>
+            <p class="about__item-text">
+              Самые высоконагруженные и отказоустойчивые сервисы в рунете
+            </p>
+          </li>
+          <li class="about__item">
+            <div class="about__item-number">5</div>
+            <p class="about__item-text">
+              Миллионы пользователей по всему миру
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="teams">
+      <div class="container">
+        <h2 class="teams__title">Команды, в которые мы ищем SRE-инженеров</h2>
+        <ul class="teams__list">
+          <li class="teams__item">
+            <h3 class="teams__item-title">Почта Mail.ru</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">Рекламные технологии</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">Delivery Club</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">IM Services</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">VK Cloud Solution</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">Процессинг</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">Команда инфраструктуры</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">Вконтакте</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">Relap & Пульс</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+          <li class="teams__item">
+            <h3 class="teams__item-title">Группа автоматизации</h3>
+            <p class="teams__item-decription">
+              Группа инфраструктуры отвечает за работу огромного количества сервисов, в том числе критичных для компании в целом.<br>
+              К последним относятся  самописный корпоративный VPN, gitlab, облако openstack для разработки с хранилищем измеряемым петабайтами, DNS, antiddos, SAP, внутренний портал для сотрудников, самописный мониторинг и весь atlassian stack.<br> 
+              Помимо этого такие сайты и системы как лидерыроссии.рф, payday.ru, combo и множество других.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
+  <footer class="footer">
+
+  </footer>
+
+  <script src="js/main.min.js"></script>
 </body>
 </html>

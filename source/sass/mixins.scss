@@ -55,3 +55,21 @@
     @content;
   }
 } */
+
+$startWidth: 1440;
+$midWidth: 768;
+$endWidth: 320;
+
+@mixin adaptiveDesktopToMobile($property, $startSize, $endSize) {
+  $addSize: $startSize - $endSize;
+  #{$property}: $startSize + px;
+  @media (max-width: #{$startWidth + px}) {
+    #{$property}: calc(#{$endSize + px} + #{$addSize} * ((100vw - #{$endWidth + px}) / #{$startWidth - $endWidth}));
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
