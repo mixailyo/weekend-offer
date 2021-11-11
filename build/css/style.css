@@ -868,10 +868,6 @@ body {
   z-index: 0;
 }
 
-.footer__peoples-pic {
-  height: auto;
-}
-
 @media (max-width: 1440px) {
   .container {
     padding-left: calc( 20px + 26 * ((100vw - 320px) / 1120));
@@ -1323,10 +1319,18 @@ body {
     grid-row-start: 1;
     margin-bottom: 24px;
   }
+
+  .footer__peoples-pic {
+    height: 640px;
+  }
 }
 
 @media (max-width: 767px) and (max-width: 1440px) {
   .header__bg-pattern {
     left: calc( -20px + -26 * ((100vw - 320px) / 1120));
+  }
+
+  .footer__peoples-pic {
+    height: calc( 295px + 345 * ((100vw - 320px) / 1120));
   }
 }

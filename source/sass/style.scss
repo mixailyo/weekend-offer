@@ -603,5 +603,7 @@
   }
 }
 .footer__peoples-pic {
-  height: auto;
+  @include viewport--sm {
+    @include adaptiveDesktopToMobile("height", 640, 295);
+  }
 }
