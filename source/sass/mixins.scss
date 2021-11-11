@@ -12,6 +12,12 @@
   }
 }
 
+@mixin viewport--ml {
+  @media (max-width: $viewport--ml - 1) {
+    @content;
+  }
+}
+
 @mixin viewport--lg {
   @media (max-width: $viewport--xl - 1) {
     @content;
@@ -64,7 +70,10 @@ $endWidth: 320;
   $addSize: $startSize - $endSize;
   #{$property}: $startSize + px;
   @media (max-width: #{$startWidth + px}) {
-    #{$property}: calc(#{$endSize + px} + #{$addSize} * ((100vw - #{$endWidth + px}) / #{$startWidth - $endWidth}));
+    #{$property}: calc(
+      #{$endSize + px} + #{$addSize} *
+        ((100vw - #{$endWidth + px}) / #{$startWidth - $endWidth})
+    );
   }
 }
 
