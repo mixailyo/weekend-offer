@@ -57,7 +57,7 @@
   @include adaptiveDesktopToMobile("padding-left", 70, 0);
   @include adaptiveDesktopToMobile("margin-top", 70, 42);
   @include adaptiveDesktopToMobile("margin-bottom", 80, 50);
-  max-width: 640px;
+  max-width: 700px;
   @include viewport--sm {
     max-width: none;
   }
